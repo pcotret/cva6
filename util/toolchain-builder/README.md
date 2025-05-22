@@ -44,14 +44,17 @@ On macOS, you can use [Homebrew](http://brew.sh) to install the dependencies:
 Once the prerequisites (see [above](#prerequisites)) are satisfied, you can fetch and build the
 upstream toolchain (default: GCC 13.1.0) for bare-metal 32-bit and 64-bit applications in just three steps.
 
+    # 0. Export RISCV to the desired location for toolchain installation
+    export RISCV=/path/to/toolchain/installation/directory
+    
     # 1. Select an installation location for the toolchain (here: the default RISC-V tooling directory $RISCV).
     INSTALL_DIR=$RISCV
 
     # 2. Fetch the source code of the toolchain (assumes Internet access.)
-    bash get-toolchain.sh
+    bash util/toolchain-builder/get-toolchain.sh
 
     # 3. Build and install the toolchain (requires write+create permissions for $INSTALL_DIR.)
-    bash build-toolchain.sh $INSTALL_DIR
+    bash util/toolchain-builder/build-toolchain.sh $INSTALL_DIR
 
 ## File and directory structure
 
