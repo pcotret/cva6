@@ -54,11 +54,11 @@ sudo apt-get install help2man device-tree-compiler
 pip3 install -r verif/sim/dv/requirements.txt
 ```
 
-7. Run these commands to install a custom Spike and Verilator (i.e. these versions must be used to simulate the CVA6) and [these](#running-regression-tests-simulations) tests suites.
+7. Run these commands to install a custom Spike and Verilator (i.e. these versions must be used to simulate the CVA6) and the CV64a6 tests suite.
 ```sh
 # DV_SIMULATORS is detailed in the next section
 export DV_SIMULATORS=veri-testharness,spike
-bash verif/regress/smoke-tests.sh
+bash verif/regress/smoke-tests-cv64a6_imafdc_sv39.sh
 ```
 
 
