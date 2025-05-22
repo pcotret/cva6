@@ -18,6 +18,10 @@ export DV_SIMULATORS=veri-testharness,vcs-testharness,vcs_uvm
 
 If exactly 2 simulators are given, their trace is compared ([see the Regression tests section](#running-regression-tests-simulations)).
 
+**If you're using the Verilator version installed through this repository, do not forget to export the PATH of the binary. Otherwise, it may use an outdated local version...**
+```bash
+export PATH=<cva6_repo_location>/tools/verilator-v5.008/bin:$PATH
+``` 
 Here is how you can run the hello world C program with the Verilator model: 
 
 ```sh
